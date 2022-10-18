@@ -11,13 +11,13 @@ console.log("So without further delay, Let's get started! \n");
 //highScore data
 var highScores = [
   {
-    name: "john snow",
-    score: 5
-  },
-  {
     name: "bhavesh",
     score: 8
-  }
+  },
+  {
+    name: "john snow",
+    score: 5
+  }  
 ];
 
 var questions = [
@@ -184,7 +184,7 @@ function printLeaderBoard(){
   for(var j = 0 ; j < highScores.length; j++){
     var name = highScores[j].name;
     var score = highScores[j].score;
-    console.log("Name: " + name + " , Score: ", score);
+    console.log("Name: " + name + ", Score:", score);
     console.log("\n");
   }
 }
@@ -193,10 +193,3 @@ go();
 calScore();
 printLeaderBoard();
 console.log("Thankyou for your time and patience! \nIf you enjoyed playing the quiz, Please share it your Friends Circle.");
-
-
-
-
-
-
-
