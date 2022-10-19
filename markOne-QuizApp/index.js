@@ -29,11 +29,11 @@ var ques2 = {
   ans: "vjti"
 };
 var ques3 = {
-  question: "where do I live? ",
+  question: "Where do I live? ",
   ans: "thane"
 };
 var ques4 = {
-  question: "which is my favourite sport? ",
+  question: "Which is my favourite sport? ",
   ans: "cricket"
 };
 var ques5 = {
@@ -55,11 +55,11 @@ function check(question, ans){
     score++;
   }
   else {
-    console.log("You are wrong!");
+    console.log("\nYou are wrong!");
     console.log("Correct Answer is "+ ans.toUpperCase())
   }
   console.log("Your score is:", score);
-  console.log("\n======================");
+  console.log("\n======================\n");
 }
 //starting the quiz 
 function play(){
