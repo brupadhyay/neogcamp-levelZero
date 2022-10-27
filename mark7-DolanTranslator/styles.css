@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap');
+
+* {
+    font-family: 'Ubuntu', sans-serif;
+    margin: 0px;
+}
+
+/*defining colors as variables*/
+:root {
+    --primary-color: #0ea5e9;
+    --secondary-color: #285780;
+    --header-color: #f8fafc;
+}
+
+/*navigation*/
+
+nav h1 {
+    background-color: var(--primary-color);
+    font-size: 2.5rem;
+    padding: 2rem;
+    color: var(--header-color);
+    text-align: center;
+}
+
+/* main div  */
+.main {
+    text-align: center;
+    padding: 1rem 1rem;
+}
+/*input div*/
+
+#txt-input {
+    margin: auto;
+    border-radius: 0.5rem;
+    height: 10vh;
+    width: 60vw;
+    padding: 1rem 2rem;
+    display: block;
+    text-align: center;
+}
+
+/*translation button*/
+.btn-translate {
+    background-color: var(--primary-color);
+    padding: 1rem 2rem;
+    margin: 2rem;
+    font-size: 1rem;
+    border: 1px solid black;
+    border-radius: 0.5rem;
+}
+
+.btn-translate:hover {
+    background-color: var(--secondary-color);
+}
+
+/*output div heading*/
+.output-text {
+    padding: 0.5rem 1rem;
+    font-size: large;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+/*div for the output text*/
+.output {
+    overflow: scroll;
+    margin: auto;
+    height: 10vh;
+    width: 60vw;
+    border: 1px solid black;
+    padding: 1rem 2rem;
+    margin-bottom: 1rem;    
+    border-radius: 0.5rem;
+}
+
+/*footer*/
+footer {
+    text-align: center;
+    background-color: var(--primary-color);
+    padding: 1rem 1rem 0rem;
+    font-size: large;
+}
+
+footer p {
+    padding: 0.5rem 1rem;
+}
+
+footer .footer-text {
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+}
+
+.footer-image img {
+    width: 40vw;
+}
+
+
+
