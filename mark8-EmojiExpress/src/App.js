@@ -6,6 +6,7 @@ var emojiDB = {
   "😎": "smiling face with sunglasses",
   "😅": "grinning face with sweat",
   "🤡": "clown face",
+  "🥱": "yawning face",
   "😇": "smiling face with halo",
   "👋": "waving hand",
   "🙏": "folded hands",
@@ -45,9 +46,9 @@ export default function App() {
       <ul>
         {emojis.map((emoji) => {
           return (
-            <span key={emoji} onClick={() => clickEventHandler(emoji)}>
+            <li key={emoji} onClick={() => clickEventHandler(emoji)}>
               {emoji}
-            </span>
+            </li>
           );
         })}
       </ul>

@@ -22,14 +22,19 @@ ul {
   padding-inline-start: 0px;
 }
 
+ul li {
+  list-style: none;
+  display: inline-block;
+}
+
 .App {
   margin-top: 50px;
   padding: 2rem;
   text-align: center;
 }
 
-span {
-  padding: 0.5rem;
+li {
+  margin: 0.5rem;
   cursor: pointer;
   font-size: 2rem;
 }
