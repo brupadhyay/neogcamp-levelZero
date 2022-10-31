@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0px;
+    text-align: center;
+}
+
+:root {
+    --primary-color: #8b5cf6;
+    --secondary-color: #a78bfa;
+}
+
+.container {
+    margin: 2rem auto;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    align-content: center;
+}
+
+header h1 {
+    color: var(--primary-color);
+}
+
+#bill-amount, #cash-given {
+    padding: 0.5rem;
+    border: 1px solid var(--secondary-color);
+    border-radius: 0.5rem;
+}
+
+label {
+    color: black;
+    padding: 0.25rem;
+}
+
+#next, #check-button {
+    cursor: pointer;
+    color: white;
+    background-color: var(--primary-color);
+    border-radius: 0.25rem;
+    border: 1px solid var(--primary-color);
+    padding: 0.25rem 0.5rem;
+    margin: 0.5rem;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+#next:hover, #check-button:hover {
+    background-color: var(--secondary-color);
+    color: black;
+}
+
+#check-button, #cash-given, #cash-heading, #return {
+    display: none;
+}
+
+#error-message {
+    margin: 0px;
+    padding: 0.5rem;
+}
+
+#return {
+    border-collapse: collapse;
+    justify-content: center;
+    text-align: center;
+}
+
+caption {
+    font-weight: bold;
+    margin-bottom: 1rem;
+    padding-top: 1rem;
+    color: var(--primary-color);
+}
+
+#return td,th {
+    border: 2px solid var(--primary-color);
+    padding: 0.25rem 0.5rem;
+}
+
+footer {
+    padding: 1rem;
+    text-align: center;
+}
+
+footer .footer-links {
+    padding: 0rem 0.5rem;
+    font-size: 1.2rem;
+}
+
+a:hover {
+    color: var(--secondary-color);
+}
+
+footer p {
+    margin: 0.5rem;
+}
+
+footer a {
+    font-weight: bold;
+    color: var(--primary-color);
+    text-decoration: none;
+}

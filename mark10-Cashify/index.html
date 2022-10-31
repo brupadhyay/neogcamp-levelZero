@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="cash-register.svg">
+    <title>Cashify Manager</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <noscript>You need to enable javascript to run this app. </noscript>
+    <div class="container">
+        <header>
+            <h1>Cashify Manager</h1>
+            <p>
+                Enter the bill amount and cash given by the customer and know minimum number of notes to return.
+            </p>
+        </header>
+        <label id="bill-heading" for="bill-amount">Bill Amount:</label>
+        <input type="text" id="bill-amount">
+        <button id="next">Next</button>
+        <label id="cash-heading" for="cash-given">Cash Given:</label>
+        <input type="text" id="cash-given">
+        <button id="check-button">Check</button>
+        <p id="error-message"></p>
+
+        <div style="overflow-x: auto">
+            <table id="return">
+                <caption>
+                    Return Change
+                </caption>
+                <tr>
+                    <th>No. of Notes</th>
+                    <td class="finalChange"></td>
+                    <td class="finalChange"></td>
+                    <td class="finalChange"></td>
+                    <td class="finalChange"></td>
+                    <td class="finalChange"></td>
+                    <td class="finalChange"></td>
+                    <td class="finalChange"></td>
+                </tr>
+                <tr>
+                    <th>Note</th>
+                    <td>2000</td>
+                    <td>500</td>
+                    <td>100</td>
+                    <td>20</td>
+                    <td>10</td>
+                    <td>5</td>
+                    <td>1</td>
+                </tr>
+            </table>
+        </div>        
+    </div>  
+    
+    <footer>
+        <a class="footer-links" href="" target="_blank"><i class="fa-brands fa-github"></i></a>
+        <a class="footer-links" href="" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a class="footer-links" href="" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+        <a class="footer-links" href="" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+        <p>Made with
+            <span>❤️</span>
+            by
+            <a href="https://brupadhyay-neogcamp-levelzero.netlify.app/" target="_blank">Bhavesh Upadhyay</a>
+        </p>
+    </footer>
+  
+    <script src="https://kit.fontawesome.com/2bfdc61e58.js" crossorigin="anonymous"></script>
+    <script src="script.js"></script>    
+</body>
+</html>
