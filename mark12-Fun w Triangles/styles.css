@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sofia&display=swap');
+
+body {
+    font-family: 'Merriweather', serif;
+    margin: 0px;
+}
+
+:root {
+    --primary-color: #6366f1;
+    --secondary-color: #818cf8;
+    --dark-color: #374151;
+}
+
+/*Navigation Bar*/
+header {
+    margin: 0rem auto 1rem;
+    background-color: var(--primary-color);
+    padding: 0.5rem 0rem;
+    border-bottom-left-radius: 0.5rem;
+}
+
+header h1 {
+    font-family: 'Sofia', cursive;
+    padding: 0.25rem 1rem;
+    margin: 0px;
+}
+
+nav {
+    text-align: right;
+    padding-right: 1rem;
+}
+
+header .nav-item {
+    text-decoration: none;
+    padding: 0rem 0.5rem;
+    font-size: 1.2rem;
+}
+
+nav .active {
+    font-weight: bold;
+    color: white;
+}
+
+/*input div*/
+.container {
+    text-align: center;
+    margin: 2rem auto;
+    padding: 2rem;
+}
+
+.container h1 {
+    margin: 1rem auto;
+    color: var(--primary-color);
+}
+
+.input-label {
+    display: block;
+    font-size: larger;
+    margin-bottom: 0.25rem;
+}
+
+.container #angle1,
+#angle2,
+#angle3 {
+    border: 2px solid var(--primary-color);
+    display: block;
+    margin: auto;
+    padding: 0.5rem 1rem;
+    width: 225px;
+    margin-bottom: 1.5rem;
+    border-radius: 0.5rem;
+}
+
+/*check button*/
+.container button {   
+    cursor: pointer;
+    border: none;
+    padding: 0.7rem 1rem;
+    margin: 1rem auto;
+    font-size: large;
+    color: white;
+    border-radius: 0.5rem;
+    border: none;
+    font-weight: bold;
+    background : var(--primary-color);
+}
+
+.container button:hover {   
+    color: var(--dark-color);
+    background: var(--secondary-color);
+}
+
+/* quiz on triangle*/
+
+.quiz {
+    margin: 1rem auto;
+}
+
+.quiz-question {
+    background-color: var(--secondary-color);
+    border-radius: 0.25rem;
+}
+
+.quiz-question:hover {
+    background-color: var(--dark-color);
+    color: white;
+}
+
+.quiz-question {
+    width: 85%;
+    margin: 1rem auto;
+    padding: 1rem 0rem;
+    font-size: larger;
+}
+
+#result {
+    color: var(--primary-color);
+    margin: 0px;
+    padding: 1rem 0rem;
+    font-size: x-large;
+    font-weight: bold;
+}
+
+/*footer css*/
+footer {
+    padding: 2rem;
+    text-align: center;
+}
+
+footer p {
+    margin: 0.5rem auto 0rem;
+}
+
+footer .footer-links {
+    padding: 0rem 0.5rem;
+    font-size: 1.3rem;
+    color: var(--primary-color);
+}
+
+footer a:hover {
+    color: var(--dark-color);
+}
+
+footer a {
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+@media screen and (max-width: 650px){
+    nav .nav-item {
+        display: block;
+        padding: 0rem 0rem 1rem; 
+    }
+}
