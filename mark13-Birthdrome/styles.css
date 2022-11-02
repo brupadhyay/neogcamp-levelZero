@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap');
+
+body {
+    font-family: 'Merriweather', serif;
+    margin: 0px;
+}
+
+:root {
+    --primary-color: #22d3ee;
+    --secondary-color: #a5f3fc;
+}
+
+h1 {
+    color: var(--primary-color);
+}
+
+.container {    
+    display: flex;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    width: 80vw;
+    max-width: 600px;
+    margin: 2rem auto 5rem;
+    padding: 2rem;
+}
+
+label {
+    padding-bottom: 0.25rem;
+    font-weight: bold;
+}
+
+#birth-input {
+    border: 2px solid var(--primary-color);
+    width: 150px;
+    padding: 0.25rem 0.5rem;
+    margin-bottom: 1rem;
+    border-radius: 0.25rem;
+}
+
+button {
+    cursor: pointer;
+    border: 2px solid var(--primary-color);
+    border-radius: 0.25rem;
+    padding: 0.25rem 0.5rem;
+    font-size: 1rem;
+    background-color: var(--primary-color);
+    color: white;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: var(--secondary-color);
+    color: black;
+}
+
+#result {    
+    line-height: 1.5rem;
+    color: var(--primary-color);
+    font-weight: bold;
+    padding: 1rem;
+}
+
+footer {
+    margin: 8rem auto 0rem;
+    padding: 2rem 2rem 0.5rem;
+    text-align: center;
+}
+
+footer p {
+    margin: 0rem auto;
+    padding-top: 0.25rem;
+}
+
+footer .footer-links {
+    padding: 0rem 0.5rem;
+    font-size: 1.2rem;
+    color: var(--primary-color);
+}
+
+footer a {
+    color: var(--primary-color);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: black;
+}
