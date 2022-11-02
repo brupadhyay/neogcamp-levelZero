@@ -5,7 +5,7 @@ const checkBtn = document.querySelector(".triangle-area");
 const result = document.querySelector("#result");
 
 function calculateArea(side1, side2, side3) {
-    var p = Math.floor( (side1 + side2 + side3) / 2 );
+    var p = (side1 + side2 + side3) / 2;
     var area = Math.sqrt(p * (p - side1) * (p - side2) * (p - side3));
     result.innerText = "Area of the triangle using heron's formula is " + area.toFixed(2);
 }
