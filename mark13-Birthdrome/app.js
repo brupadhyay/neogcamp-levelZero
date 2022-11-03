@@ -1,7 +1,7 @@
 const dobInput = document.querySelector("#birth-input");
 const showBtn = document.querySelector("#show-btn");
 const res = document.querySelector("#result");
-
+const privacyNote = document.querySelector("#privacy-note");
 function reverseStr(str) {
     var charList = str.split('');
     var reversedList = charList.reverse();
@@ -121,6 +121,57 @@ function getNextDate(date) {
     };
 }
 
+function getPrevDate(date) {
+    var day = date.day - 1;
+    var month = date.month;
+    var year = date.year;
+
+    var daysInMonth = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+
+    if(month == 3) {
+        if(isLeapYear(year)) {
+            if( day < 1) {
+                day = 29;
+            }
+        } else {
+            day = 28;
+        }
+        month--;
+    } else {
+        if( day < 1 ){
+            month--;
+            day = daysInMonth[month - 1];
+        }
+    }
+
+    if(month < 1){
+        day = 31;
+        month = 12;
+        year--;
+    }
+
+    return {
+        day: day,
+        month: month,
+        year: year
+    }
+}
+
+function getPrevPalindromeDate(date) {
+    var cnt = 0;
+    var prevDate = getPrevDate(date);
+
+    while(1){
+        cnt++;
+        if( checkPalindromeForAllDateFormats(prevDate) ){
+            break;
+        }
+        prevDate = getPrevDate(prevDate);
+    }
+    prevDate = dateToString(prevDate);
+    return [prevDate,cnt];
+}
+
 function getNextPalindromeDate(date) {
     var cnt = 0;
     var nextDate = getNextDate(date);
@@ -137,8 +188,10 @@ function getNextPalindromeDate(date) {
 }
 
 function showHandler() {
+    
     var inputData = dobInput.value;
     if (inputData !== '') {
+        privacyNote.style.display = 'none';
         var listOfDate = inputData.split('-');
         var date = {
             day: Number(listOfDate[2]),
@@ -148,11 +201,14 @@ function showHandler() {
 
         var isPalindrome = checkPalindromeForAllDateFormats(date);
         if (isPalindrome) {
-            res.innerText = "Yay! Your birthday is a palindrome 🥳";
+            res.innerText = "Yay! Your birthday is a palindrome 🥳🥳";
         } else {
+            var prevPalindromeDate = getPrevPalindromeDate(date);
             var nextPalindromeDate = getNextPalindromeDate(date);
-            res.innerText = "Your birthday is not a palindrome, the next palindrome date is " + nextPalindromeDate[0].day + '-' + nextPalindromeDate[0].month + '-' + nextPalindromeDate[0].year + ", you missed it by " + nextPalindromeDate[1] + " days🙁";
+            res.innerText = "Your birthday is not a palindrome, the next palindrome date is " + nextPalindromeDate[0].day + '-' + nextPalindromeDate[0].month + '-' + nextPalindromeDate[0].year + ", you missed it by " + nextPalindromeDate[1] + " days🙁" + " OR, the previous palindrome date is " + prevPalindromeDate[0].day + '-' + prevPalindromeDate[0].month + '-' + prevPalindromeDate[0].year + ", you got ahead of this by " + prevPalindromeDate[1] + " days😢";
         }
+    } else {
+        res.innerText = "We don't store your data, please enter your birthday"
     }
 }
 
