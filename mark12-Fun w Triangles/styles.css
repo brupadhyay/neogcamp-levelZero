@@ -7,8 +7,8 @@ body {
 }
 
 :root {
-    --primary-color: #6366f1;
-    --secondary-color: #818cf8;
+    --primary-color: #47B5FF;
+    --secondary-color: #B4CDE6;
     --dark-color: #374151;
 }
 
@@ -98,13 +98,13 @@ nav .active {
 }
 
 .quiz-question {
-    background-color: var(--secondary-color);
+    background-color: var(--primary-color);
     border-radius: 0.25rem;
 }
 
 .quiz-question:hover {
-    background-color: var(--dark-color);
-    color: white;
+    background-color: var(--secondary-color);
+    color: black;
 }
 
 .quiz-question {
